@@ -13,6 +13,8 @@ def test_valid_login():
     email_field = driver.find_element(By.CSS_SELECTOR, '#email').send_keys('admin@admin.com')
     password_field = driver.find_element(By.CSS_SELECTOR, '#password').send_keys('admin123')
     submit_btn = driver.find_element(By.CSS_SELECTOR, '#submitLoginBtn').click()
+    main_page = driver.find_element(By.CSS_SELECTOR, '#prooood').is_displayed()
+    assert main_page == True
     time.sleep(5)
     driver.quit()
 
