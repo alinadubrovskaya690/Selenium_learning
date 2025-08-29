@@ -29,3 +29,15 @@ def test_invalid_login():
     assert login_error == True
     time.sleep(5)
     driver.quit()
+
+def test_empty_login():
+    driver.get('https://qa-practice.netlify.app/auth_ecommerce')
+    email_field = driver.find_element(By.CSS_SELECTOR, '#email').send_keys('')
+    password_field = driver.find_element(By.CSS_SELECTOR, '#password').send_keys('')
+    submit_btn = driver.find_element(By.CSS_SELECTOR, '#submitLoginBtn').click()
+    main_page = driver.find_element(By.CSS_SELECTOR, '#prooood').is_displayed()
+    login_error = driver.find_element(By.CSS_SELECTOR, '.alert-danger').is_displayed()
+    assert main_page == False
+    assert login_error == True
+    time.sleep(5)
+    driver.quit()
