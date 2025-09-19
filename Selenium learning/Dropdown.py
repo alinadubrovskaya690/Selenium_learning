@@ -20,5 +20,7 @@ def test_dropdown_multiple_options():
     driver.get('https://qa-practice.netlify.app/dropdowns')
     simple_dropdown = Select(driver.find_element(By.CSS_SELECTOR, '#dropdown-menu'))
     simple_dropdown.select_by_index(2)
+    simple_dropdown.select_by_value('Japan')
+    simple_dropdown.select_by_visible_text('Brazil')
     time.sleep(15)
     driver.quit()
