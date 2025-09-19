@@ -12,6 +12,13 @@ driver = webdriver.Chrome(service=service)
 def test_dropdown():
     driver.get('https://qa-practice.netlify.app/dropdowns')
     simple_dropdown = Select(driver.find_element(By.CSS_SELECTOR, '#dropdown-menu'))
+    simple_dropdown.select_by_index(1)
+    time.sleep(15)
+    driver.quit()
+
+def test_dropdown_several_elements():
+    driver.get('https://qa-practice.netlify.app/dropdowns')
+    simple_dropdown = Select(driver.find_element(By.CSS_SELECTOR, '#dropdown-menu'))
     simple_dropdown.select_by_index(2)
     time.sleep(15)
     driver.quit()
