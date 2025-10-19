@@ -4,11 +4,11 @@ from selenium.webdriver.common.by import By
 
 URL = 'https://qa-practice.netlify.app/auth_ecommerce'
 
-email_field = (By.CSS_SELECTOR, '#email')
-password_field = (By.CSS_SELECTOR, '#password')
-submit_btn = (By.CSS_SELECTOR, '#submitLoginBtn')
-main_page = (By.CSS_SELECTOR, '#prooood')
-login_error = (By.CSS_SELECTOR, '.alert-danger')
+email_field = (By.XPATH, '//*[@id = "email"]')
+password_field = (By.XPATH, '//*[@id = "password"]')
+submit_btn = (By.XPATH, '//*[@id = "submitLoginBtn"]')
+main_page = (By.XPATH, '//*[@id = "prooood"]')
+login_error = (By.XPATH, '//*[@class = "alert alert-danger"]')
 
 
 class LoginPage(BasePage):
