@@ -1,5 +1,4 @@
 from Pages.dropdown_page import DropdownPage
-import time
 
 def test_simple_dropdown(browser):
     dropdown_pg = DropdownPage(browser)
