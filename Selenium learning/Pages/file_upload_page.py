@@ -22,3 +22,6 @@ class FileUploadPage(BasePage):
 
     def submit_alert_is_displayed(self):
         return self.find(submit_alert).is_displayed()
+
+    def submit_alert_text(self):
+        return self.find(submit_alert).text
