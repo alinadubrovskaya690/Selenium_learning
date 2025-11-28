@@ -25,11 +25,17 @@ class PaginationPage(BasePage):
     def page_1_alert_is_displayed(self):
         return self.find(page_1_alert).is_displayed()
 
+    def page_1_alert_text(self):
+        return self.find(page_1_alert).text
+
     def page_2_button(self):
         return self.find(page_2_btn).click()
 
     def page_2_alert_is_displayed(self):
         return self.find(page_2_alert).is_displayed()
+
+    def page_2_alert_text(self):
+        return self.find(page_2_alert).text
 
     def page_3_button(self):
         return self.find(page_3_btn).click()
@@ -37,8 +43,14 @@ class PaginationPage(BasePage):
     def page_3_alert_is_displayed(self):
         return self.find(page_3_alert).is_displayed()
 
+    def page_3_alert_text(self):
+        return self.find(page_3_alert).text
+
     def next_page_button(self):
         return self.find(next_page_btn).click()
 
     def next_page_alert_is_displayed(self):
         return self.find(next_page_alert).is_displayed()
+
+    def next_page_alert_text(self):
+        return self.find(next_page_alert).text
