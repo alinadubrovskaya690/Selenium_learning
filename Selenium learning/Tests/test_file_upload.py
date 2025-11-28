@@ -7,3 +7,10 @@ def test_file_upload(browser):
     file_upload_pg.submit_button()
     assert file_upload_pg.submit_alert_is_displayed() == True
     assert file_upload_pg.submit_alert_text() == 'You have successfully uploaded "Palette.png"'
+
+def test_no_files_submit(browser):
+    file_upload_pg = FileUploadPage(browser)
+    file_upload_pg.file_upload_open()
+    file_upload_pg.submit_button()
+    assert file_upload_pg.submit_alert_is_displayed() == True
+    assert file_upload_pg.submit_alert_text() == 'You have successfully uploaded ""'
